@@ -8,5 +8,9 @@ namespace CocusFileManager.Users.Helpers
     public class AppSettings
     {
         public string Secret { get; set; }
+        public int MaximumTextFilesForUser { get; set; }
+        public int MaximumXMLFilesForUser { get; set; }
+        public int MaximumJSONFilesForUser { get; set; }
+
     }
 }

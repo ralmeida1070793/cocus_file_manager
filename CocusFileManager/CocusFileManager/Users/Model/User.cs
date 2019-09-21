@@ -15,6 +15,7 @@ namespace CocusFileManager.Users.Model
         public string Role { get; set; }
         public int AccessedXMLFiles { get; set; }
         public int AccessedTXTFiles { get; set; }
+        public int AccessedJSONFiles { get; set; }
         public string Token { get; set; }
     }
 }

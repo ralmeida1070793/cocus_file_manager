@@ -40,6 +40,8 @@ namespace CocusFileManager.Controllers
         }
 
         [Route("file")]
+        [Authorize(Roles = "Admin, User")]
+        [Authorize(Policy = "MaximumUserJSONFilesAccess")]
         [HttpGet]
         public string getFileContent(string file)
         {

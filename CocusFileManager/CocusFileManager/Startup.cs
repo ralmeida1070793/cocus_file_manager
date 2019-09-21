@@ -40,18 +40,19 @@ namespace CocusFileManager
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddSingleton<IAuthorizationHandler, UserXMLFileHandler>();
             services.AddSingleton<IAuthorizationHandler, UserTXTFileHandler>();
-
-            services.AddAuthorization(options =>
-            {
-                options.AddPolicy("MaximumUserXMLFilesAccess", policy => policy.Requirements.Add(new UserXMLNumberOfFilesRequirement(5)));
-                options.AddPolicy("MaximumUserTXTFilesAccess", policy => policy.Requirements.Add(new UserTXTNumberOfFilesRequirement(10)));
-            });
+            services.AddSingleton<IAuthorizationHandler, UserJSONFileHandler>();
 
             var appSettingsSection = Configuration.GetSection("AppSettings");
             services.Configure<AppSettings>(appSettingsSection);
-
-            // configure jwt authentication
             var appSettings = appSettingsSection.Get<AppSettings>();
+
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("MaximumUserXMLFilesAccess", policy => policy.Requirements.Add(new UserXMLNumberOfFilesRequirement(appSettings.MaximumXMLFilesForUser)));
+                options.AddPolicy("MaximumUserTXTFilesAccess", policy => policy.Requirements.Add(new UserTXTNumberOfFilesRequirement(appSettings.MaximumTextFilesForUser)));
+                options.AddPolicy("MaximumUserJSONFilesAccess", policy => policy.Requirements.Add(new UserJSONNumberOfFilesRequirement(appSettings.MaximumJSONFilesForUser)));
+            });
+            
             var key = Encoding.ASCII.GetBytes(appSettings.Secret);
             services.AddAuthentication(x =>
             {
