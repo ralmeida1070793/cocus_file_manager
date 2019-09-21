@@ -39,10 +39,12 @@ namespace CocusFileManager
             services.AddSingleton<IHostingEnvironment, HostingEnvironment>();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddSingleton<IAuthorizationHandler, UserXMLFileHandler>();
+            services.AddSingleton<IAuthorizationHandler, UserTXTFileHandler>();
 
             services.AddAuthorization(options =>
             {
                 options.AddPolicy("MaximumUserXMLFilesAccess", policy => policy.Requirements.Add(new UserXMLNumberOfFilesRequirement(5)));
+                options.AddPolicy("MaximumUserTXTFilesAccess", policy => policy.Requirements.Add(new UserTXTNumberOfFilesRequirement(10)));
             });
 
             var appSettingsSection = Configuration.GetSection("AppSettings");

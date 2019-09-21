@@ -16,8 +16,8 @@ namespace CocusFileManager.Users.Services
     {
         private List<User> _users = new List<User>
         {
-            new User { Id = 1, FirstName = "Admin", LastName = "User", Username = "admin", Password = "admin", Role = Role.Admin, AccessedXMLFiles = 500 },
-            new User { Id = 2, FirstName = "Normal", LastName = "User", Username = "user", Password = "user", Role = Role.User, AccessedXMLFiles = 10 }
+            new User { Id = 1, FirstName = "Admin", LastName = "User", Username = "admin", Password = "admin", Role = Role.Admin, AccessedXMLFiles = 500, AccessedTXTFiles = 5000 },
+            new User { Id = 2, FirstName = "Normal", LastName = "User", Username = "user", Password = "user", Role = Role.User, AccessedXMLFiles = 10, AccessedTXTFiles = 8 }
         };
 
         private readonly AppSettings _appSettings;

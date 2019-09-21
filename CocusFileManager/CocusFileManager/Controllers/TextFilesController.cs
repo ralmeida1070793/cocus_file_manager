@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using CocusFileManager.FileList;
 using CocusFileManager.FileReaderStrategy;
 using CocusFileManager.FileReaderStrategy.Strategies;
+using CocusFileManager.Users.Model;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -46,6 +48,8 @@ namespace CocusFileManager.Controllers
         }
 
         [Route("file")]
+        [Authorize(Roles = "Admin, User")]
+        [Authorize(Policy = "MaximumUserTXTFilesAccess")]
         [HttpGet]
         public string getFileContent(string file)
         {

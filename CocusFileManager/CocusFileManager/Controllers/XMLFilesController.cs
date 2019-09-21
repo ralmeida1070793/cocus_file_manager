@@ -40,6 +40,7 @@ namespace CocusFileManager.Controllers
         }
 
         [Route("file")]
+        [Authorize(Roles = "Admin, User")]
         [Authorize(Policy = "MaximumUserXMLFilesAccess")]
         [HttpGet]
         public string getFileContent(string file)
