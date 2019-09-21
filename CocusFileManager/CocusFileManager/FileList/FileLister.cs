@@ -43,6 +43,9 @@ namespace CocusFileManager.FileList
                 case SupportedFileTypes.ENCRYPTED_XML:
                     folderPath += "EncryptedXML\\";
                     break;
+                case SupportedFileTypes.ENCRYPTED_JSON:
+                    folderPath += "EncryptedJSON\\";
+                    break;
                 default:
                     throw new Exception("Unsupported File Type");
             }
@@ -54,7 +57,7 @@ namespace CocusFileManager.FileList
                 if (
                     ((type == SupportedFileTypes.PLAIN_TEXT || type == SupportedFileTypes.ENCRYPTED_TEXT) && fileInfo.Extension.ToLower() == ".txt") ||
                     ((type == SupportedFileTypes.XML || type == SupportedFileTypes.ENCRYPTED_XML) && fileInfo.Extension.ToLower() == ".xml") ||
-                    (type == SupportedFileTypes.JSON && fileInfo.Extension.ToLower() == ".json")
+                    ((type == SupportedFileTypes.JSON || type == SupportedFileTypes.ENCRYPTED_JSON) && fileInfo.Extension.ToLower() == ".json")
                 )
                 {
                     result.Add(fileInfo.Name);
