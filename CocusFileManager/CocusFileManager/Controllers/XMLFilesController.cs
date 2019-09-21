@@ -20,6 +20,7 @@ namespace CocusFileManager.Controllers
         private readonly IHostingEnvironment _hostingEnvironment;
         private readonly IHttpContextAccessor _httpContextAccessor;
         const SupportedFileTypes FILE_TYPE = SupportedFileTypes.XML;
+        const SupportedFileTypes ENCRYPTED_FILES = SupportedFileTypes.ENCRYPTED_XML;
 
         public XMLFilesController(
             IHostingEnvironment hostingEnvironment,
@@ -49,14 +50,22 @@ namespace CocusFileManager.Controllers
             return context.GetFileContent();
         }
 
+        [Route("encrypted")]
+        [HttpGet]
         public List<string> getAvailableEncryptedFiles(SupportedFileTypes fileType)
         {
-            throw new NotImplementedException();
+            FileLister fileLister = new FileLister(_hostingEnvironment, _httpContextAccessor);
+            return fileLister.getFiles(ENCRYPTED_FILES);
         }
 
+        [Route("encrypted/file")]
+        [HttpGet]
         public string getEncryptedFileContent(string file)
         {
-            throw new NotImplementedException();
+            ReaderContext context = ReaderContext._getInstance();
+            context.setContext(new EncryptedXMLFile(ENCRYPTED_FILES, file));
+
+            return context.GetFileContent();
         }
     }
 }

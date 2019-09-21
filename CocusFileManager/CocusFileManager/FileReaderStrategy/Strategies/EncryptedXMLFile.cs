@@ -8,16 +8,16 @@ using System.Threading.Tasks;
 
 namespace CocusFileManager.FileReaderStrategy.Strategies
 {
-    public class EncryptedTextFile : IFileReader
+    public class EncryptedXMLFile : IFileReader
     {
         private string _filePath = Directory.GetCurrentDirectory() + "\\FileRepository\\";
         private SupportedFileTypes _type;
 
-        public EncryptedTextFile(SupportedFileTypes type, string fileName)
+        public EncryptedXMLFile(SupportedFileTypes type, string fileName)
         {
             switch(type) {
-                case SupportedFileTypes.ENCRYPTED_TEXT:
-                    _filePath += "EncryptedText\\";
+                case SupportedFileTypes.ENCRYPTED_XML:
+                    _filePath += "EncryptedXML\\";
                     break;
                 default:
                     throw new Exception("Unsupported File Type");
