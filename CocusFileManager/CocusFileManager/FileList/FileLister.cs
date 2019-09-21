@@ -31,6 +31,9 @@ namespace CocusFileManager.FileList
                 case SupportedFileTypes.PLAIN_TEXT:
                     folderPath += "PlainText\\";
                     break;
+                case SupportedFileTypes.ENCRYPTED_TEXT:
+                    folderPath += "EncryptedText\\";
+                    break;
                 default:
                     throw new Exception("Unsupported File Type");
             }

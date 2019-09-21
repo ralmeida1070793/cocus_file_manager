@@ -10,5 +10,7 @@ namespace CocusFileManager.Controllers
     {
         List<string> getAvailableFiles(SupportedFileTypes fileType);
         string getFileContent(string file);
+        List<string> getAvailableEncryptedFiles(SupportedFileTypes fileType);
+        string getEncryptedFileContent(string file);
     }
 }

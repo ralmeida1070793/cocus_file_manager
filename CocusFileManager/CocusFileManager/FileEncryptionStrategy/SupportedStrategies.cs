@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CocusFileManager.FileList
+namespace CocusFileManager.FileEncryptionStrategy
 {
-    public enum SupportedFileTypes
+    public enum SupportedStrategies
     {
-        PLAIN_TEXT,
-        ENCRYPTED_TEXT
+        Xor
     }
 }
