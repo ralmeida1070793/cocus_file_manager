@@ -10,6 +10,7 @@ namespace CocusFileManager.FileList
         PLAIN_TEXT,
         XML,
         ENCRYPTED_TEXT,
-        ENCRYPTED_XML
+        ENCRYPTED_XML,
+        JSON
     }
 }
