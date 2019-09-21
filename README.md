@@ -11,3 +11,5 @@ Similar to the encryption requirements, the user roles were implemented through 
 A simple Authentication module was implemented from mock, although the application can easily be extended for data base presistance.
 
 It's worth noticing that the setup for the encryption as well as the maximum number of files permited for the user role can be setup in the appsettings.json file.
+
+Thanks for the challenge. It was fun.
