@@ -45,5 +45,15 @@ namespace CocusFileManager.Controllers
 
             return context.GetFileContent();
         }
+
+        public List<string> getAvailableEncryptedFiles(SupportedFileTypes fileType)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string getEncryptedFileContent(string file)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

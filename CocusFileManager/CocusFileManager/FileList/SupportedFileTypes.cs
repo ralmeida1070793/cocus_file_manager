@@ -8,6 +8,7 @@ namespace CocusFileManager.FileList
     public enum SupportedFileTypes
     {
         PLAIN_TEXT,
-        XML
+        XML,
+        ENCRYPTED_TEXT
     }
 }

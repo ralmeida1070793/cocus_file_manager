@@ -34,6 +34,9 @@ namespace CocusFileManager.FileList
                 case SupportedFileTypes.XML:
                     folderPath += "XML\\";
                     break;
+                case SupportedFileTypes.ENCRYPTED_TEXT:
+                    folderPath += "EncryptedText\\";
+                    break;
                 default:
                     throw new Exception("Unsupported File Type");
             }
@@ -43,7 +46,7 @@ namespace CocusFileManager.FileList
                 FileInfo fileInfo = new FileInfo(file);
 
                 if (
-                    (type == SupportedFileTypes.PLAIN_TEXT && fileInfo.Extension.ToLower() == ".txt") ||
+                    ((type == SupportedFileTypes.PLAIN_TEXT || type == SupportedFileTypes.ENCRYPTED_TEXT) && fileInfo.Extension.ToLower() == ".txt") ||
                     (type == SupportedFileTypes.XML && fileInfo.Extension.ToLower() == ".xml")
                 )
                 {
