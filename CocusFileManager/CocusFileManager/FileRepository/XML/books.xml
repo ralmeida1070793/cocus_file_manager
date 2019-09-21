@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<books>
+	<Book>
+		<ID>1</ID>
+		<Author>Camões</Author>
+		<Title>Os Lusiadas</Title>
+	</Book>
+	<Book>
+		<ID>2</ID>
+		<Author>Fernando Pessoa</Author>
+		<Title>Mensagem</Title>
+	</Book>
+	<Book>
+		<ID>3</ID>
+		<Author>Eça de Queirós</Author>
+		<Title>Os Maias</Title>
+	</Book>
+	<Book>
+		<ID>4</ID>
+		<Author>José Saramago</Author>
+		<Title>Memorial do Convento</Title>
+	</Book>
+</books>
