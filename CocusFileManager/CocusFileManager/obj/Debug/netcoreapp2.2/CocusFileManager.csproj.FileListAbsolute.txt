@@ -1,0 +1,14 @@
+C:\Users\rui.almeida\source\repos\cocus_file_manager\CocusFileManager\CocusFileManager\bin\Debug\netcoreapp2.2\CocusFileManager.deps.json
+C:\Users\rui.almeida\source\repos\cocus_file_manager\CocusFileManager\CocusFileManager\bin\Debug\netcoreapp2.2\CocusFileManager.runtimeconfig.json
+C:\Users\rui.almeida\source\repos\cocus_file_manager\CocusFileManager\CocusFileManager\bin\Debug\netcoreapp2.2\CocusFileManager.runtimeconfig.dev.json
+C:\Users\rui.almeida\source\repos\cocus_file_manager\CocusFileManager\CocusFileManager\bin\Debug\netcoreapp2.2\CocusFileManager.dll
+C:\Users\rui.almeida\source\repos\cocus_file_manager\CocusFileManager\CocusFileManager\obj\Debug\netcoreapp2.2\CocusFileManager.csprojAssemblyReference.cache
+C:\Users\rui.almeida\source\repos\cocus_file_manager\CocusFileManager\CocusFileManager\obj\Debug\netcoreapp2.2\CocusFileManager.csproj.CoreCompileInputs.cache
+C:\Users\rui.almeida\source\repos\cocus_file_manager\CocusFileManager\CocusFileManager\obj\Debug\netcoreapp2.2\CocusFileManager.RazorAssemblyInfo.cache
+C:\Users\rui.almeida\source\repos\cocus_file_manager\CocusFileManager\CocusFileManager\obj\Debug\netcoreapp2.2\CocusFileManager.RazorAssemblyInfo.cs
+C:\Users\rui.almeida\source\repos\cocus_file_manager\CocusFileManager\CocusFileManager\obj\Debug\netcoreapp2.2\CocusFileManager.AssemblyInfoInputs.cache
+C:\Users\rui.almeida\source\repos\cocus_file_manager\CocusFileManager\CocusFileManager\obj\Debug\netcoreapp2.2\CocusFileManager.AssemblyInfo.cs
+C:\Users\rui.almeida\source\repos\cocus_file_manager\CocusFileManager\CocusFileManager\obj\Debug\netcoreapp2.2\CocusFileManager.RazorTargetAssemblyInfo.cache
+C:\Users\rui.almeida\source\repos\cocus_file_manager\CocusFileManager\CocusFileManager\bin\Debug\netcoreapp2.2\CocusFileManager.pdb
+C:\Users\rui.almeida\source\repos\cocus_file_manager\CocusFileManager\CocusFileManager\obj\Debug\netcoreapp2.2\CocusFileManager.dll
+C:\Users\rui.almeida\source\repos\cocus_file_manager\CocusFileManager\CocusFileManager\obj\Debug\netcoreapp2.2\CocusFileManager.pdb
